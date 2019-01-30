@@ -3,16 +3,18 @@ kind: Deployment
 metadata:
   name: bookapi
 spec:
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
         app: bookapi
         tier: backend
     spec:
+      imagePullSecrets:
+        - name: acr-auth
       containers:
         - name: app
-          image: bookapi:latest
+          image: bookapi.azurecr.io/bookapi
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
