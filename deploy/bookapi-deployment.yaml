@@ -20,4 +20,12 @@ spec:
             - containerPort: 3000
           env:
             - name: PG_HOST
-              value: "postgres-master.default"
+              value: "postgresql.postgres.database.azure.com"
+            - name: PG_PORT 
+              value: "5432"
+            - name: PG_USER
+              value: "postgres@postgresql"
+            - name: PG_PASSWORD 
+              value: 'kEYZXMjhEgQh34ZGHzk'
+            - name: PG_DATABASE
+              value: 'bookapi'
