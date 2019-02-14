@@ -16,6 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    docker build -t $(dockerId)/$(imageName) .
+    docker build -t bookapi:latest .
 
   displayName: 'build bookapi image from git'
