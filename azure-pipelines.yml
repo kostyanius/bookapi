@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    az login
+    az login -u kostiantyn.khomko@hotmail.com -p HkV2304_
     az acr login --name bookapi.azurecr.io/bookapi
 
   displayName: 'Azure ACR Login'
