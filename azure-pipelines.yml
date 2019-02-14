@@ -21,6 +21,6 @@ steps:
   displayName: 'Azure Login'
 
 - script: |
-    docker build -t bookapi.azurecr.io/bookapi:latest -f Dockerfile.app .
+    docker build -f Dockerfile.app .
 
   displayName: 'build bookapi image from git'
