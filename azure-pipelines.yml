@@ -17,7 +17,7 @@ steps:
 
 - script: |
     az login --service-principal -u ecbe4987-345b-4e37-968a-75fb92a421ef --password HkV2304_ --tenant 4d930edf-639e-414a-a359-97b91a3deb4e
-    docker login bookapi.azurecr.io/bookapi
+    docker login bookapi.azurecr.io/bookapi -u bookapi -p VZf0K6b36mqA19Y6Lh8fW/IVEFO92o59
   displayName: 'Azure Login'
 
 - script: |
