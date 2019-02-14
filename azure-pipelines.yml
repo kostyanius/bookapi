@@ -16,6 +16,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    az acr login --name bookapi.azurecr.io/bookapi
+
+  displayName: 'Azure ACR Login'
+
+- script: |
     docker build -t bookapi.azurecr.io/bookapi:latest -f Dockerfile.app .
 
   displayName: 'build bookapi image from git'
