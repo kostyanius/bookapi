@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'ubuntu-16.04'
 
 steps:
 - task: NodeTool@0
@@ -16,6 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    docker build -t $(dockerId)/$(imageName) .
+
+  displayName: 'build bookapi image from git'
