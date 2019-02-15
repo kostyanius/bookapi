@@ -21,7 +21,7 @@ steps:
   displayName: 'Azure Login'
 
 - script: |
-   docker build -t bookapi-dependencies -f Dockerfile.dependencies .   
+   docker build -t bookapi-dependencies.azurecr.io/bookapi-dependencies:latest -f Dockerfile.dependencies .   
    docker build -t bookapi.azurecr.io/bookapi:latest -f Dockerfile.app .
    
 
